@@ -10,6 +10,14 @@ async def main_task_last_test(token: str, url: str, name: str, subscription_mess
 
 
 def main(token: str, url: str, subscription_message: str, max_messages: int, max_connections: int, websocket_name: str):
+    """
+    :param token: websocket authentication token
+    :param url: websocket URL
+    :param subscription_message: prices channel subscription message
+    :param max_messages: number of messages per connection
+    :param max_connections: number of concurrent connections
+    :param websocket_name: name to be added to the name of the plot
+    """
     asyncio.run(
         main_task_last_test(token=token, url=url, name=websocket_name, subscription_message=subscription_message,
                             max_messages=max_messages, max_connections=max_connections))
